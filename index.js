@@ -3,7 +3,6 @@ const bodyParser =require('body-parser')
 const cors =require('cors')
 const env = require("dotenv").config()
 const mongoose =require('mongoose')
-//const postRoutes = require('./routes/postRoutes.js')
 mongoose.set('strictQuery', false)
 
 
@@ -16,12 +15,10 @@ app.use(bodyParser.urlencoded({limit:"30mb", extended:true}));
 app.use(cors());
 
 
-//app.use("/api/v1/posts",postRoutes )
 
 //Defie PORT and Database
 const PORT = process.env.PORT || 5000;
 const CONNECTION_URL = process.env.MONGO_URL || 'mongodb://localhost:27017';
-//MONGO_URL = mongodb+srv://Labeebopc:labeeblab@insta-clone.iwlfkgd.mongodb.net/instaclone?retryWrites=true&w=majority
 
 
 //Connect to the PORT and Database
